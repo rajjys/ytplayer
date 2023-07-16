@@ -2,7 +2,7 @@ import React from 'react'
 
 const Videos = ( {videos} ) => {
 
-  console.log(videos);
+  console.log("Changed");
   return (
     <div> Videos
       <div></div>
