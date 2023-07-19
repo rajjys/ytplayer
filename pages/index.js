@@ -10,7 +10,6 @@ import { fetchFromAPI } from './utils/fetchFromAPI'
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('New');
   const [videos, setVideos] = useState([]);
-  console.log("Cat: " + selectedCategory);
   
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).
