@@ -11,7 +11,8 @@ export default function Search() {
   const [videos, setVideos] = useState([]);
   const router = useRouter();
   const { slug } = router.query;
-  const searchTerm = slug;
+  const searchTerm = slug
+  ;
   console.log('page: ' + searchTerm);
   
   useEffect(() => {
