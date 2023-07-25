@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { Box, Typography } from '@mui/material'
 import { Videos } from '@/components'
-import { fetchFromAPI } from '../utils/fetchFromAPI'
+import { fetchFromAPI } from '../../utils/fetchFromAPI'
 import { useRouter } from 'next/router'
 
 

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 import { Videos, SideBar } from '@/components'
-import { fetchFromAPI } from './utils/fetchFromAPI'
+import { fetchFromAPI } from '../utils/fetchFromAPI'
 
 
 

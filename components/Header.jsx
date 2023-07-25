@@ -1,7 +1,7 @@
 import React from 'react'
 import { Stack } from '@mui/material'
 import Link from 'next/link'
-import { logo } from '@/pages/utils/constants'
+import { logo } from '@/utils/constants'
 import Image from 'next/image'
 import { SearchBar } from '.'
 

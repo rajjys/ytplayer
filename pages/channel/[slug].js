@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { fetchFromAPI } from "../../utils/fetchFromAPI";
 import { Box } from "@mui/material";
 import { ChannelCard } from "@/components";
 import { Videos } from "@/components";
