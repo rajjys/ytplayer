@@ -5,7 +5,7 @@ import { TextField, Button } from "@mui/material";
 const Download = () => {
     const router = useRouter();
     const { slug } = router.query;
-
+    console.log(slug);
 
     const [url, setUrl] = useState('');
     const [error, setError] = useState(false);
@@ -27,9 +27,8 @@ const Download = () => {
       }
       setUrl('');
     };
-  
     return (
-      <div className="text-center margin-auto pt-8 bg-gray-300 ">
+      <div className="text-center margin-auto pt-8 bg-gray-300 flex flex-row justify-around pb-4">
         <TextField
           id="url-textfield"
           label="Video URL here"
@@ -39,8 +38,10 @@ const Download = () => {
           onKeyDown={handleKeyDown}
           error={error}
           required
+          className="w-3/4 ml-32 mr-4"
+          InputProps={{ sx: { borderRadius: "15px" } }}
         />
-        <Button variant="contained" color="primary" onClick={handleButtonClick}>
+        <Button variant="contained" color="primary" sx={{borderRadius: "15px"}} onClick={handleButtonClick} className="w-1/4 mr-32 ml-4">
           Validate
         </Button>
       </div>
