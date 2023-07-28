@@ -10,6 +10,8 @@ import { Videos } from '@/components';
 const VideoDetail = () => {
     const router = useRouter();
     const { slug } = router.query;
+    ///let slug = router.query.slug;
+    ///const [slug, setSlug] = useState(router.query.slug);
     const [videoDetail, setVideoDetail] = useState(null);
     const [ videos, setVideos ] = useState([]);
     ////const { snippet: { title, channelId, channelTitle }, statistics } = VideoDetail;
@@ -21,13 +23,16 @@ const VideoDetail = () => {
       fetchFromAPI(`search?part=snippet&relatedToVideoId=${slug}`).
       then((data)=> setVideos(data.items));
     }, [slug]);
+    ///Executed when the video done playing
+    const playNext = () => {
+    }
     if(!videoDetail?.snippet) return "Loading";
   return (
     <Box minHeight='95vh'>
       <Stack direction={{ xs: 'column', md: 'row'}}>
         <Box flex={1}>
           <Box sx={{width: '100%', position: 'sticky', top: '86px'}}>
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${slug}`} className='react-player' controls />
+            <ReactPlayer url={`https://www.youtube.com/watch?v=${slug}`} className='react-player' onEnded={playNext} controls />
             <Typography variant='h5' color='white' fontWeight='bold' p={2}>
               { videoDetail.snippet.title } 
             </Typography>
